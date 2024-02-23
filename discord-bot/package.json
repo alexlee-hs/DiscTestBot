@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.518.0",
+    "@aws-sdk/lib-dynamodb": "^3.518.0"
+  }
+}

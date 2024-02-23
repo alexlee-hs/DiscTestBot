@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  PadMonsterDB:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: 'MonsterId'
+        AttributeType: 'S'
+      BillingMode: 'PAY_PER_REQUEST'
+      ContributorInsightsSpecification:
+        Enabled: false
+      DeletionProtectionEnabled: false
+      KeySchema:
+      - AttributeName: 'MonsterId'
+        KeyType: 'HASH'
+      TableClass: 'STANDARD'
+      TableName: 'PAD_MONSTER_DB'
+  PadUserDB:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: 'UserId'
+        AttributeType: 'S'
+      BillingMode: 'PAY_PER_REQUEST'
+      ContributorInsightsSpecification:
+        Enabled: false
+      DeletionProtectionEnabled: false
+      KeySchema:
+      - AttributeName: 'UserId'
+        KeyType: 'HASH'
+      TableClass: 'STANDARD'
+      TableName: 'PAD_USER_DB'
+  PadRollDB:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: 'UserId'
+        AttributeType: 'S'
+      BillingMode: 'PAY_PER_REQUEST'
+      ContributorInsightsSpecification:
+        Enabled: false
+      DeletionProtectionEnabled: false
+      KeySchema:
+      - AttributeName: 'UserId'
+        KeyType: 'HASH'
+      TableClass: 'STANDARD'
+      TableName: 'PAD_ROLL_DB'
