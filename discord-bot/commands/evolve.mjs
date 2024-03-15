@@ -1,7 +1,6 @@
 import {
   getDynamoDBClient,
   getMonsterItem,
-  getRollRoster,
   getUserItem,
   updateUserInventory,
 } from '../utils/aws-api.mjs';
@@ -78,7 +77,7 @@ function getFailedResponse(message) {
   };
 }
 
-function createEvolutionResponse() {
+function createEvolutionResponse(monster) {
   return {
     statusCode: 200,
     body: JSON.stringify({
