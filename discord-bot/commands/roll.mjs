@@ -66,7 +66,7 @@ async function rollMonsterId(client) {
 async function rollMonsterIdFromRarity(client, rarity) {
   const res = await getRollRoster(client, rarity);
   const monsterList = res.MonsterList.split(',');
-  const roll = Math.ceil(Math.random() * monsterList.length);
+  const roll = Math.floor(Math.random() * monsterList.length);
   return monsterList[roll];
 }
 

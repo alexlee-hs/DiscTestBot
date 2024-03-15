@@ -66,8 +66,8 @@ function createResponse(table) {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      'type': 4,
-      'data': {
+      type: 4,
+      data: {
         embeds: [table],
         tts: false,
       },
